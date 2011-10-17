@@ -196,93 +196,96 @@
 		$(document).ready(function(){
 			$('body.section-projects img.tileImage').reflect();
 			$('.solutions-image').reflect();
+
 			$("body.section-projects .tileItem").qtip({
-                                content: {
-                                        text: function(api) {return $(this).find('.tileBody').html();}
-                                },
-   				position: {
-				     	my: 'bottom center',  // Position my top left...
-				      	at: 'top center', // at the bottom right of...
-   				},
-   				style: {
-			      		classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-   				}
+                content: {
+                        text: function(api) {return $(this).find('.tileBody').html();}
+                },
+                position: {
+                     	my: 'bottom center',  // Position my top left...
+                      	at: 'top center', // at the bottom right of...
+                },
+                style: {
+                  		classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                }
                         });
-                        $(".projects-wrapper .column").qtip({
-                                content: {
-                                        text: function(api) {return $(this).parent().attr('title');}
-                                },
-                                position: {
-                                        my: 'bottom center',  // Position my top left...
-                                        at: 'top center', // at the bottom right of...
-                                },
-                                style: {
-                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                                }
-                        });
+
+            $(".projects-wrapper .column").qtip({
+                content: {
+                        text: function(api) {return $(this).parent().attr('title');}
+                },
+                position: {
+                        my: 'bottom center',  // Position my top left...
+                        at: 'top center', // at the bottom right of...
+                },
+                style: {
+                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                }
+            });
+
 			$(".section-solutions .column a.tile").qtip({
-                                content: {
-                                        text: function(api) {return $(this).attr('title');}
-                                },
-                                position: {
-                                        my: 'bottom center',  // Position my top left...
-                                        at: 'top center', // at the bottom right of...
-                                },
-                                style: {
-                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                                }
-                        });
+                content: {
+                        text: function(api) {return $(this).attr('title');}
+                },
+                position: {
+                        my: 'bottom center',  // Position my top left...
+                        at: 'top center', // at the bottom right of...
+                },
+                style: {
+                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                }
+            });
 
 			$("#logos a.logo").qtip({
-                                content: {
-                                        text: function(api) {return $(this).attr('title');}
-                                },
-                                position: {
-                                        my: 'bottom center',  // Position my top left...
-                                        at: 'top center', // at the bottom right of...
-                                },
-                                style: {
-                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                                }
-			});
+                content: {
+                        text: function(api) {return $(this).attr('title');}
+                },
+                position: {
+                        my: 'bottom center',  // Position my top left...
+                        at: 'top center', // at the bottom right of...
+                },
+                style: {
+                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                }
+            });
 		});
 		</script>
-               <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
         <script>
-		$(document).ready(function(){
-			$('body.section-projects img.tileImage').reflect();
-		});
-	/* IE FALLBACK FOR GRAPHS */
-  	if ( !$.browser.msie || $.browser.version >= 9 ) {
+		    $(document).ready(function(){
+			    $('body.section-projects img.tileImage').reflect();
+		    });
 
-	            $("#logos ul li").hover(function() { //On hover...
+	        /* IE FALLBACK FOR GRAPHS */
+          	if ( !$.browser.msie || $.browser.version >= 9 ) {
 
-		            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+                $("#logos ul li").hover(function() { //On hover...
 
-		            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
-		            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+	                var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
 
-		            //Animate the image to 0 opacity (fade it out)
-		            $(this).find("span").stop().fadeTo('normal', 0 , function() {
-			            $(this).hide() //Hide the image after fade
-		            });
-	            } , function() { //on hover out...
-		            //Fade the image to full opacity 
-		            $(this).find("span").stop().fadeTo('normal', 1).show();
-	            });
-	}
+	                //Set a background image(thumbOver) on the <a> tag - Set position to bottom
+	                $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+
+	                //Animate the image to 0 opacity (fade it out)
+	                $(this).find("span").stop().fadeTo('normal', 0 , function() {
+		                $(this).hide() //Hide the image after fade
+	                });
+                } , function() { //on hover out...
+	                //Fade the image to full opacity 
+	                $(this).find("span").stop().fadeTo('normal', 1).show();
+                });
+            }
         </script>
-<script type="text/javascript">
+        <script type="text/javascript">
+            /* Change the values below according to your Google analytics account */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-9551159-1']);
+            _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9551159-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
 </html>
