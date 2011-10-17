@@ -172,21 +172,25 @@
 		<script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
 		<script type="text/javascript" src="docs/js/projects.js"></script>
         <script>
-	            $("#logos ul li").hover(function() { //On hover...
+		    $(document).ready(function(){
+			    $('.image-wrapper img').reflect();
+            });
 
-		            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+            $("#logos ul li").hover(function() { //On hover...
 
-		            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
-		            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+	            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
 
-		            //Animate the image to 0 opacity (fade it out)
-		            $(this).find("span").stop().fadeTo('normal', 0 , function() {
-			            $(this).hide() //Hide the image after fade
-		            });
-	            } , function() { //on hover out...
-		            //Fade the image to full opacity 
-		            $(this).find("span").stop().fadeTo('normal', 1).show();
+	            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
+	            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+
+	            //Animate the image to 0 opacity (fade it out)
+	            $(this).find("span").stop().fadeTo('normal', 0 , function() {
+		            $(this).hide() //Hide the image after fade
 	            });
+            } , function() { //on hover out...
+	            //Fade the image to full opacity 
+	            $(this).find("span").stop().fadeTo('normal', 1).show();
+            });
         </script>
 	</body>
 </html>
