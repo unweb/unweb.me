@@ -99,20 +99,6 @@
 					</div>
 				</div>
 			</div>
-			<div id="logos" class="section">
-				<h3 class="section-title bigger gradient-vert">Our Clients</h3>
-                <ul>
-				    <li><a href="/projects/okeanos-cloud-computing-iaas" title="Greek Research and Technology Network" class="logo"><span><img src="images/logos/grnet.png" /></span></a></li>
-                    <li><a href="/projects/tee-thrakis" title="Technical Chamber of Thrace" class="logo"><span><img src="images/logos/tee.png" /></span></a></li>
-				    <li><a href="/projects/cosmosportal.eu" title="National Technical University of Athens" class="logo"><span><img src="images/logos/ntua.png" /></span></a></li>
-				    <li><a href="/projects/the-childrens-ombudsman" title="The Greek Ombudsman" class="logo"><span><img src="images/logos/ombudsman.png" /></span></a></li>
-				    <li><a href="/projects/plumi" title="Engage Media" class="logo"><span><img src="images/logos/engagemedia.png" /></span></a></li>
-				    <li><a href="/projects/openfsm" title="World Social Forum" class="logo"><span><img src="images/logos/wsf.png" /></span></a></li>
-				    <li><a href="/projects/sto-kokkino" title="Sto kokkino 105.5FM " class="logo"><span><img src="images/logos/stokokkino.png" /></span></a></li>
-				    <li><a href="/projects/invision-images.com" title="Invision Images photo agency" class="logo"><span><img src="images/logos/invision.png" /></span></a></li>
-                </ul>
-			</div>
-		</div>
 		<div id="footer-wrapper">
 			<div id="footer">
 				<div class="footer-section">
@@ -139,32 +125,9 @@
                         <a href="/blog/some-words-on-things-we-like/RSS"><img src="images/rss.png" /></a>
                         <a href="http://twitter.com/unwebme"><img src="images/twitter.png" /></a>
 					</div>
-				<div id="hqmap"><img src="images/hqmap.png" /></div>
+				    <div id="hqmap"><img src="images/hqmap.png" /></div>
 				</div>
 			</div>
 		</div>
-		
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
-		<script type="text/javascript" src="docs/js/solutions.js"></script>
-		<script>
-	            $("#logos ul li").hover(function() { //On hover...
-
-		            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
-
-		            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
-		            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
-
-		            //Animate the image to 0 opacity (fade it out)
-		            $(this).find("span").stop().fadeTo('normal', 0 , function() {
-			            $(this).hide() //Hide the image after fade
-		            });
-	            } , function() { //on hover out...
-		            //Fade the image to full opacity 
-		            $(this).find("span").stop().fadeTo('normal', 1).show();
-	            });
-        </script>
 	</body>
 </html>
