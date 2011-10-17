@@ -1,0 +1,138 @@
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:css="http://namespaces.plone.org/diazo/css">
+
+
+    <notheme if-path="image_view_fullscreen" />
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="plonelink.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+    <theme href="index.html" />
+
+    <!-- replace title !-->
+    <replace content="/html/head/title" theme="/html/head/title" />
+
+    <!-- copy meta base and script tags from head -->
+    <append  content="/html/head/base" theme="/html/head" />
+    <append  content="/html/head/meta" theme="/html/head" />
+    <append  content='/html/head/script' theme='/html/head' />     
+    <prepend  content='/html/head/style' theme='/html/head' />
+    <prepend  content="/html/head/link" theme="/html/head" />
+    <drop content="/html/head/link[contains(@href, 'columns')]" />
+    <drop content="/html/head/link[contains(@rel, 'kinetic-stylesheet')]" />
+
+    <!-- navigation -->
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="footer-nav"]' />
+
+    <!-- searchbox -->
+    <copy content='//*[@id="portal-searchbox"]/form' theme='//*[@id="search-bar"]' />
+
+    <!-- remove breadcrumbs -->
+    <drop content='//*[@id="portal-breadcrumbs"]' />
+
+    <!-- copy body attrs -->
+    <prepend theme="/html/body" content="/html/body/@class" />
+    <prepend theme="/html/body" content="/html/body/@id" />	
+    <prepend theme="/html/body" content="/html/body/@dir" />
+
+    <!--copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' /-->
+    <!--copy content='//*[@id="portal-languageselector"]' theme='//*[@id="languageselector"]' /-->
+    
+    <!-- main content for pages besides home -->
+    <replace content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- slideshow -->
+    <copy css:content='.AbovePortletManager1 .portletContent' theme='//div[@class="slide"][1]/div[@class="slide-text wide"]' />
+    <copy css:content='.AbovePortletManager2 .portletContent' theme='//div[@class="slide"][2]/div[@class="slide-text wide"]' />
+    <copy css:content='.AbovePortletManager3 .portletContent' theme='//div[@class="slide"][3]/div[@class="slide-text wide"]' />
+
+    <!-- remove image slider if not in home -->
+    <drop css:theme="#image-slider" if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- leave client logos on index page-->
+    <drop theme='//*[@id="logos"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')]|/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
+
+    <!-- drop slideshow script for pages other than home -->
+    <drop theme='/html/body//script' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- copy home page content -->
+    <replace content='//*[@id="content-core"]' theme='//*[@id="col-1"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/>
+    <copy content='//*[@id="portlets-below"]' theme='//*[@id="blog-col"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/> 
+
+    <!-- drop page title and description in home page -->
+    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+    <drop content='//*[@id="parent-fieldname-description"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- section solutions -->
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
+    <replace css:content='body.section-solutions #portlets-below'>
+	<xsl:for-each css:select=".cell">
+		<div id="column" class="column solution-column">
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'social')])"><xsl:attribute name="id">column-socialmedia</xsl:attribute></xsl:if>
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'business')])"><xsl:attribute name="id">column-business</xsl:attribute></xsl:if>
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'government')])"><xsl:attribute name="id">column-egov</xsl:attribute></xsl:if>
+			<h3 class="dotted-bg solutions-title"><xsl:copy-of css:select=".portletHeader span" /></h3>
+			<div class="solutions-image-wrapper dotted-bg">
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'social')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp1.png"/></xsl:if>
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'business')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp2.png"/></xsl:if>
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'government')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp3.png"/></xsl:if>
+			</div>
+						
+			<ul>
+			<xsl:for-each css:select="dd">
+				<li>
+					<xsl:copy-of css:select="a" />
+				</li>
+			</xsl:for-each>
+			</ul>
+		</div>
+
+	</xsl:for-each>
+    </replace>
+
+
+   <!-- projects .portlet-collection-open-source -->
+    <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
+
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
+
+    <!-- section projects - open source products -->
+    <replace css:content=".portlet-collection-open-source">
+	<h3 class="section-title bigger gradient-vert">Open Source Products</h3>
+	<div class="projects-wrapper">
+	<xsl:for-each css:select="a">
+    	<a href="">
+                <xsl:attribute name="title">
+                        <xsl:value-of select="@title" />
+                </xsl:attribute>
+
+                <xsl:attribute name="href">
+			<xsl:value-of select="@href" />
+		</xsl:attribute>
+		<div class="column project-column">
+		<img src="++theme++unweb.me/images/sphere.png">
+                <xsl:attribute name="src">
+                        <xsl:value-of select="@href" />
+			<xsl:text>/image_thumb</xsl:text>
+                </xsl:attribute>
+
+		</img>
+		<h4 class="project-title"><xsl:copy-of select="text()" /></h4>
+		</div>
+	</a>
+	</xsl:for-each>
+	</div>
+    </replace>
+
+    <!-- drop first listing/pagination on blog -->
+    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+
+    <!-- footer -->
+    <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
+</rules>
