@@ -146,7 +146,7 @@ a {
 }
 
 h1.documentFirstHeading {
-    background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
+    background: url("../../images/background-2.gif") repeat-x scroll 0 0 #4D8ED4;
     color: #FFFFFF;
     padding: 28px 22px;
     text-shadow: 1px 1px 9px #777777;
@@ -246,7 +246,7 @@ h1.documentFirstHeading {
 }
 
 #list-nav .selected {
-    background:#4D8ED4 url(../../images/background-2v.gif) repeat-x 0 0;
+    background:#4D8ED4 url(../../images/background-2.gif) repeat-x 0 0;
     color: #fff;
 }
 
@@ -256,7 +256,7 @@ h1.documentFirstHeading {
 }
 
 #list-nav li.selected:hover {
-    background:#52517f url(../../images/background-2v.gif) repeat-x 0 0;
+    background:#52517f url(../../images/background-2.gif) repeat-x 0 0;
 }
 
 /* Language Selection & Search */
@@ -333,7 +333,7 @@ h1.documentFirstHeading {
 /* Image Slider */
 
 #image-slider {
-    background:#4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
+    background:#4d8ed4 url(../../images/background-2.gif) repeat-x 0 0;
     display: none;
     overflow:visible;
     border-bottom: 1px solid #fafafa;
@@ -595,7 +595,7 @@ body.section-solutions .relatedItems {
 }
 
 .gradient-vert {
-    background: #4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
+    background: #4d8ed4 url(../../images/background-2.gif) repeat-x 0 0;
 }
 
 .gradient-vert-lite {
@@ -1022,7 +1022,7 @@ body.section-blog #parent-fieldname-description {
 /* Footer Section */
 
 #footer-wrapper {
-    background:#4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
+    background:#4d8ed4 url(../../images/background-2.gif) repeat-x 0 0;
     width: 100%;
     border-top:1px solid #aaa;
     clear: both;
