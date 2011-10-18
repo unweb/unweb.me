@@ -1,291 +1,412 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>unweb.me - State of the art information systems</title>
-		<!--[if lt IE 9]>
-			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" media="all" href="docs/css/jquery.qtip.min.css"/>
-		<link rel="stylesheet" media="all" href="docs/css/style.css"/>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,greek' rel='stylesheet' type='text/css'>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-	</head>
-	<body lang="en" class="section-state-of-the-art-information-systems">
-			
-		<div id="header-wrapper">
-			<div id="header">
-				<div id="header-logo">
-					<a href="/"><img class="image-logo" src="images/logo.png"/></a>
-				</div>
-				<div id="nav">
-					<ul id="list-nav">
-						<li class="selected"><a class="category-link special" href="index.html">Home</a></li>
-                        <li class=""><a class="category-link special" href="about.html">About</a></li>
-                        <li><a class="category-link special" href="solutions.html">Solutions</a></li>
-                        <li><a class="category-link special" href="projects.html">Projects</a></li>
-                        <li><a class="category-link special" href="blog.html">Blog</a></li>
-					</ul>
-				</div>
-			</div>
-			<div id="search-bar">
-				<span id="lang-select" class="small"> EN GR </span>
-				<input type="text" id="searchGadget" />
-			</div>
-		</div>
-		<div id="content-wrapper">
-			<!-- Slideshow HTML -->
-			<div id="image-slider">
-				<script type="text/javascript">document.getElementById("image-slider").style.display = 'none';</script>
-				<div id="slidesContainer">
-				  <div class="slide">
-					  <!-- Content for slide 1 goes here -->
-					  <div class="slide-text wide">
-						  <h3 class="column-title">Social Media</h3>
-						  <p class="big">Powering up communities. Praesent sed dui nec arcu congue congue et at eros. Integer arcu libero, tempor vel ultricies et, rutrum nec ante.</p>
-					  </div>
-					  <canvas id="canvas0" class="processing-canvas"></canvas>
-				  </div>
-				  <div class="slide">
-					  <!-- Content for slide 2 goes here. -->
-					  <div class="slide-text wide">
-						  <h3 class="column-title">Business</h3>
-						  <p class="big">Productivity, security & managed systems solutions for business and corporate needs. Praesent sed dui nec arcu congue congue et at eros. Integer arcu libero, tempor vel ultricies et, rutrum nec ante.</p>
-					  </div>
-					  <canvas id="canvas1" class="processing-canvas"></canvas>
-				  </div>
-				  <div class="slide">
-					  <!-- Content for slide 3 goes here. -->
-					  <div class="slide-text wide">
-						  <h3 class="column-title">e-government</h3>
-						  <p class="big">E-democracy, workfolws and web GIS applications. Praesent sed dui nec arcu congue congue et at eros. Integer arcu libero, tempor vel ultricies et, rutrum nec ante.</p>
-					  </div>
-					  <canvas id="canvas2" class="processing-canvas"></canvas>
-				  </div>
-				</div>
-			</div>
-			<!-- / Slideshow HTML -->
-			<div id="main" class="section">
-				<div id="col-1" class="column wide">
-					<h3 class="column-title">Why unweb.me rocks!</h3>
-					<p class="big">
-						Unweb.me is a small but dedicated team of engineers that love to create genuine information systems. We have a strong preference to Free/Open Source Software and prefer to follow agile development practices. We also take information systems security seriously, and will deliver highly secure information systems.
-					</p>
-					<h3 class="column-title">Featured Project</h3>
-					<p>
-						<img class="column-image" src="images/logos/plumi.png"/>
-					 Plumi is a Free Software video sharing Content Management System that enables the creation of Youtube-like systems. With Plumi you will have your own sophisticated video sharing site easily, with a wide array of functionality to facilitate video distribution and community creation. It includes a sophisticated workflow, site-wide, vodcasting, server-side flash/ogg transcoding and embedding, large file uploading via FTP and a range of other useful features.
-					</p>
-                    <p>Unweb.me is leading the development of Plumi since version 3.0 and is maintaining several Plumi portals, e.g. www.engagemedia.org of Australian based environmental NGO Engage Media.
-					</p>
-                </div>
-				<div id="news" class="column double last gradient">
-					<div id="blog-col" class="news-column last">
-						<h3 class="column-title">Blog</h3>
-						<ul id="blog">
-                            <li>Workshop: φτιάξε το δικό σου youtube με ΕΛΛΑΚ! Sep 05, 2011 </li>
-                            <li>Plumi 4.0 video platform released May 24, 2011 </li>
-                            <li>Introducing collective.piwik.* May 24, 2011 </li>
-                            <li>κυκλοφόρησε το marikworld.com! May 24, 2011 </li>
-                            <li>Κυκλοφόρησε το Plone 4 </li>
-                            <li>Plumi 3.1 video platform released </li>
-                            <li>Ημερίδα Ενημέρωσης της Ειδικής Γραμματείας Ψηφιακού Σχεδιασμού για το ΕΠ Ψηφιακή Σύγκλιση </li>
-                            <li>Athcon 2010 </li>
-                            <li>H unweb.me στην 2η ημερίδα του labs.opengov.gr </li>
-						</ul>
-					</div>
-					<div id="twitter-col" class="news-column">
-                        
-						<h3 class="column-title">Twitter</h3>
-                        <script src="docs/js/widget.js"></script>
-                        <script>
-                        new TWTR.Widget({
-                          version: 2,
-                          type: 'faves',
-                          rpp: 10,
-                          interval: 30000,
-                          title: '',
-                          subject: '',
-                          width: 'auto',
-                          height: 520,
-                          theme: {
-                            shell: {
-                              background: 'transparent',
-                              color: '#ffffff'
-                            },
-                            tweets: {
-                              background: 'transparent',
-                              color: '#444444',
-                              links: '#4d8ed4'
-                            }
-                          },
-                          features: {
-                            scrollbar: true,
-                            loop: false,
-                            live: true,
-                            hashtags: true,
-                            timestamp: true,
-                            avatars: false,
-                            behavior: 'all'
-                          }
-                        }).render().setUser('unwebme').start();
-                        </script>                        
-					</div>
-				</div>
-			</div>
-			<div id="logos" class="section">
-				<h3 class="section-title bigger gradient-vert">Our Clients</h3>
-                <ul>
-				    <li><a href="/projects/okeanos-cloud-computing-iaas" title="Greek Research and Technology Network" class="logo"><span><img src="images/logos/grnet.png" /></span></a></li>
-                    <li><a href="/projects/tee-thrakis" title="Technical Chamber of Thrace" class="logo"><span><img src="images/logos/tee.png" /></span></a></li>
-				    <li><a href="/projects/cosmosportal.eu" title="National Technical University of Athens" class="logo"><span><img src="images/logos/ntua.png" /></span></a></li>
-				    <li><a href="/projects/the-childrens-ombudsman" title="The Greek Ombudsman" class="logo"><span><img src="images/logos/ombudsman.png" /></span></a></li>
-				    <li><a href="/projects/plumi" title="Engage Media" class="logo"><span><img src="images/logos/engagemedia.png" /></span></a></li>
-				    <li><a href="/projects/openfsm" title="World Social Forum" class="logo"><span><img src="images/logos/wsf.png" /></span></a></li>
-				    <li><a href="/projects/sto-kokkino" title="Sto kokkino 105.5FM " class="logo"><span><img src="images/logos/stokokkino.png" /></span></a></li>
-				    <li><a href="/projects/invision-images.com" title="Invision Images photo agency" class="logo"><span><img src="images/logos/invision.png" /></span></a></li>
-                </ul>
-			</div>
-		</div>
-		<div id="footer-wrapper">
-			<div id="footer">
-				<div class="footer-section">
-					<div id="footer-logo">
-						<img class="image-logo" src="images/logo-w.png"/>
-					</div>
-					<ul id="footer-nav">
-						<li class="selected"><a class="category-link special" href="index.html">Home</a></li>
-						<li><a class="category-link special" href="about.html">About</a></li>
-						<li><a class="category-link special" href="solutions.html">Solutions</a></li>
-						<li><a class="category-link special" href="projects.html">Projects</a></li>
-						<li><a class="category-link special" href="blog.html">Blog</a></li>
-					</ul>
-				</div>
-				<div id="footer-details" class="footer-section">
-					<div class="footer-detail">
-                        <h3>Contact us</h3>
-						<p>unweb.me Ltd. is a distributed company, registered in Komotini, Greece. You may arrange for a meeting with one of our representatives in Athens, Thesaloniki, Komotini, London or Amsterdam.</p>
-                        <ul>
-                            <li><b>Tel:</b> +30 211 780 3202</li>
-                            <li><b>e-mail:</b> info<img src="images/at.png" />unweb.me</li>
-                        </ul>
-                        <h3>Follow us</h3>
-                        <a href="/blog/some-words-on-things-we-like/RSS"><img src="images/rss.png" /></a>
-                        <a href="http://twitter.com/unwebme"><img src="images/twitter.png" /></a>
-					</div>
-				<div id="hqmap"><img src="images/hqmap.png" /></div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-		<script id="script-slide1" type="text/javascript" charset="UTF-8" src="docs/slide1/slide1.js"></script>
-		<script id="script-slide2" type="text/javascript" charset="UTF-8" src="docs/slide2/slide2.js"></script>
-		<script id="script-slide3" type="text/javascript" charset="UTF-8" src="docs/slide3/slide3.js"></script>
-		<!--[if gt IE 8]><script src="docs/js/libs/processing-1.3.5.api.min.js"></script><![endif]-->
-		<!--[if !IE]><!--><script src="docs/js/libs/processing-1.3.5.min.js"></script><!--<![endif]-->
-		<script type="text/javascript" src="docs/js/frontpage.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
 
-	</body>
-       <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
-       <script type="text/javascript" src="docs/js/libs/jquery.qtip.min.js"></script>
-       <script>
-		$(document).ready(function(){
-			$('body.section-projects img.tileImage').reflect();
-			$('.solutions-image').reflect();
+  <title>unweb.me - State of the art information systems</title>
+  <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" media="all" href="docs/css/jquery.qtip.min.css" type="text/css" />
+  <link rel="stylesheet" media="all" href="docs/css/style.css" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,greek'
+  rel='stylesheet' type='text/css' />
+  <!-- Adding "maximum-scale=1" fixes the Mobile Safari
+  auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-			$("body.section-projects .tileItem").qtip({
-                content: {
-                        text: function(api) {return $(this).find('.tileBody').html();}
-                },
-                position: {
-                     	my: 'bottom center',  // Position my top left...
-                      	at: 'top center', // at the bottom right of...
-                },
-                style: {
-                  		classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                }
-                        });
+<body lang="en" class="section-state-of-the-art-information-systems">
+  <div id="header-wrapper">
+    <div id="header">
+      <div id="header-logo">
+        <a href="/"><img class="image-logo" src="images/logo.png" /></a>
+      </div>
 
-            $(".projects-wrapper .column").qtip({
-                content: {
-                        text: function(api) {return $(this).parent().attr('title');}
-                },
-                position: {
-                        my: 'bottom center',  // Position my top left...
-                        at: 'top center', // at the bottom right of...
-                },
-                style: {
-                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                }
-            });
+      <div id="nav">
+        <ul id="list-nav">
+          <li class="selected"><a class="category-link special" href=
+          "index.html">Home</a></li>
 
-			$(".section-solutions .column a.tile").qtip({
-                content: {
-                        text: function(api) {return $(this).attr('title');}
-                },
-                position: {
-                        my: 'bottom center',  // Position my top left...
-                        at: 'top center', // at the bottom right of...
-                },
-                style: {
-                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                }
-            });
+          <li class=""><a class="category-link special" href=
+          "about.html">About</a></li>
 
-			$("#logos a.logo").qtip({
-                content: {
-                        text: function(api) {return $(this).attr('title');}
-                },
-                position: {
-                        my: 'bottom center',  // Position my top left...
-                        at: 'top center', // at the bottom right of...
-                },
-                style: {
-                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
-                }
-            });
-		});
-		</script>
-        <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
-        <script>
-		    $(document).ready(function(){
-			    $('body.section-projects img.tileImage').reflect();
-		    });
+          <li><a class="category-link special" href=
+          "solutions.html">Solutions</a></li>
 
-	        /* IE FALLBACK FOR GRAPHS */
-          	if ( !$.browser.msie || $.browser.version >= 9 ) {
+          <li><a class="category-link special" href=
+          "projects.html">Projects</a></li>
 
-                $("#logos ul li").hover(function() { //On hover...
+          <li><a class="category-link special" href=
+          "blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
 
-	                var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+    <div id="search-bar">
+      <span id="lang-select" class="small">EN GR</span> <input type="text"
+      id="searchGadget" />
+    </div>
+  </div>
 
-	                //Set a background image(thumbOver) on the <a> tag - Set position to bottom
-	                $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+  <div id="content-wrapper">
+    <!-- Slideshow HTML -->
 
-	                //Animate the image to 0 opacity (fade it out)
-	                $(this).find("span").stop().fadeTo('normal', 0 , function() {
-		                $(this).hide() //Hide the image after fade
-	                });
-                } , function() { //on hover out...
-	                //Fade the image to full opacity 
-	                $(this).find("span").stop().fadeTo('normal', 1).show();
-                });
+    <div id="image-slider">
+      <script type="text/javascript">
+        //<![CDATA[
+        document.getElementById("image-slider").style.display = 'none';
+        //]]>
+      </script>
+
+      <div id="slidesContainer">
+        <div class="slide">
+          <!-- Content for slide 1 goes here -->
+
+          <div class="slide-text wide">
+            <h3 class="column-title">Social Media</h3>
+
+            <p class="big">Powering up communities. Praesent sed dui nec
+            arcu congue congue et at eros. Integer arcu libero, tempor vel
+            ultricies et, rutrum nec ante.</p>
+          </div>
+
+		  <canvas id="canvas0" class="processing-canvas"></canvas>
+        </div>
+
+        <div class="slide">
+          <!-- Content for slide 2 goes here. -->
+
+          <div class="slide-text wide">
+            <h3 class="column-title">Business</h3>
+
+            <p class="big">Productivity, security &amp; managed systems
+            solutions for business and corporate needs. Praesent sed dui
+            nec arcu congue congue et at eros. Integer arcu libero, tempor
+            vel ultricies et, rutrum nec ante.</p>
+          </div>
+
+		  <canvas id="canvas1" class="processing-canvas"></canvas>
+        </div>
+
+        <div class="slide">
+          <!-- Content for slide 3 goes here. -->
+
+          <div class="slide-text wide">
+            <h3 class="column-title">e-government</h3>
+
+            <p class="big">E-democracy, workfolws and web GIS
+            applications. Praesent sed dui nec arcu congue congue et at
+            eros. Integer arcu libero, tempor vel ultricies et, rutrum nec
+            ante.</p>
+          </div>
+
+		  <canvas id="canvas2" class="processing-canvas"></canvas>
+        </div>
+      </div>
+    </div><!-- / Slideshow HTML -->
+
+    <div id="main" class="section">
+      <div id="col-1" class="column wide">
+        <h3 class="column-title">Why unweb.me rocks!</h3>
+
+        <p class="big">Unweb.me is a small but dedicated team of engineers
+        that love to create genuine information systems. We have a strong
+        preference to Free/Open Source Software and prefer to follow agile
+        development practices. We also take information systems security
+        seriously, and will deliver highly secure information systems.</p>
+
+        <h3 class="column-title">Featured Project</h3>
+
+        <p><img class="column-image" src="images/logos/plumi.png" /> Plumi
+        is a Free Software video sharing Content Management System that
+        enables the creation of Youtube-like systems. With Plumi you will
+        have your own sophisticated video sharing site easily, with a wide
+        array of functionality to facilitate video distribution and
+        community creation. It includes a sophisticated workflow,
+        site-wide, vodcasting, server-side flash/ogg transcoding and
+        embedding, large file uploading via FTP and a range of other
+        useful features.</p>
+
+        <p>Unweb.me is leading the development of Plumi since version 3.0
+        and is maintaining several Plumi portals, e.g. www.engagemedia.org
+        of Australian based environmental NGO Engage Media.</p>
+      </div>
+
+      <div id="news" class="column double last gradient">
+        <div id="blog-col" class="news-column last">
+          <h3 class="column-title">Blog</h3>
+
+          <ul id="blog">
+            <li>Workshop: φτιάξε το δικό σου youtube με ΕΛΛΑΚ! Sep 05, 2011 </li>
+
+            <li>Plumi 4.0 video platform released May 24, 2011 </li>
+
+            <li>Introducing collective.piwik.* May 24, 2011 </li>
+
+            <li>κυκλοφόρησε το marikworld.com! May 24, 2011 </li>
+
+            <li>Κυκλοφόρησε το Plone 4 </li>
+
+            <li>Plumi 3.1 video platform released </li>
+
+            <li>Ημερίδα Ενημέρωσης της Ειδικής Γραμματείας Ψηφιακού Σχεδιασμού για το ΕΠ Ψηφιακή Σύγκλιση </li>
+
+            <li>Athcon 2010 </li>
+
+            <li>H unweb.me στην 2η ημερίδα του labs.opengov.gr </li>
+          </ul>
+        </div>
+
+        <div id="twitter-col" class="news-column">
+          <h3 class="column-title">Twitter</h3>
+          <script src="docs/js/widget.js" type="text/javascript"></script>
+          <script type="text/javascript">
+            //<![CDATA[
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'faves',
+                  rpp: 10,
+                  interval: 30000,
+                  title: '',
+                  subject: '',
+                  width: 'auto',
+                  height: 520,
+                  theme: {
+                    shell: {
+                      background: 'transparent',
+                      color: '#ffffff'
+                    },
+                    tweets: {
+                      background: 'transparent',
+                      color: '#444444',
+                      links: '#4d8ed4'
+                    }
+                  },
+                  features: {
+                    scrollbar: true,
+                    loop: false,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: false,
+                    behavior: 'all'
+                  }
+                }).render().setUser('unwebme').start();
+          //]]>
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div id="logos" class="section">
+      <h3 class="section-title bigger gradient-vert">Our Clients</h3>
+
+      <ul>
+        <li><a href="/projects/okeanos-cloud-computing-iaas" title=
+        "Greek Research and Technology Network" class=
+        "logo"><span><img src="images/logos/grnet.png" /></span></a></li>
+
+        <li><a href="/projects/tee-thrakis" title=
+        "Technical Chamber of Thrace" class="logo"><span><img src=
+        "images/logos/tee.png" /></span></a></li>
+
+        <li><a href="/projects/cosmosportal.eu" title=
+        "National Technical University of Athens" class=
+        "logo"><span><img src="images/logos/ntua.png" /></span></a></li>
+
+        <li><a href="/projects/the-childrens-ombudsman" title=
+        "The Greek Ombudsman" class="logo"><span><img src=
+        "images/logos/ombudsman.png" /></span></a></li>
+
+        <li><a href="/projects/plumi" title="Engage Media" class=
+        "logo"><span><img src=
+        "images/logos/engagemedia.png" /></span></a></li>
+
+        <li><a href="/projects/openfsm" title="World Social Forum" class=
+        "logo"><span><img src="images/logos/wsf.png" /></span></a></li>
+
+        <li><a href="/projects/sto-kokkino" title="Sto kokkino 105.5FM "
+        class="logo"><span><img src=
+        "images/logos/stokokkino.png" /></span></a></li>
+
+        <li><a href="/projects/invision-images.com" title=
+        "Invision Images photo agency" class="logo"><span><img src=
+        "images/logos/invision.png" /></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-wrapper">
+    <div id="footer">
+      <div class="footer-section">
+        <div id="footer-logo"><img class="image-logo" src=
+        "images/logo-w.png" /></div>
+
+        <ul id="footer-nav">
+          <li class="selected"><a class="category-link special" href=
+          "index.html">Home</a></li>
+
+          <li><a class="category-link special" href=
+          "about.html">About</a></li>
+
+          <li><a class="category-link special" href=
+          "solutions.html">Solutions</a></li>
+
+          <li><a class="category-link special" href=
+          "projects.html">Projects</a></li>
+
+          <li><a class="category-link special" href=
+          "blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-details" class="footer-section">
+        <div class="footer-detail">
+          <h3>Contact us</h3>
+
+          <p>unweb.me Ltd. is a distributed company, registered in
+          Komotini, Greece. You may arrange for a meeting with one of our
+          representatives in Athens, Thesaloniki, Komotini, London or
+          Amsterdam.</p>
+
+          <ul>
+            <li><b>Tel:</b> +30 211 780 3202</li>
+
+            <li><b>e-mail:</b> info<img src=
+            "images/at.png" />unweb.me</li>
+          </ul>
+
+          <h3>Follow us</h3><a href=
+          "/blog/some-words-on-things-we-like/RSS"><img src=
+          "images/rss.png" /></a> <a href="http://twitter.com/unwebme"><img src=
+          "images/twitter.png" /></a>
+        </div>
+
+        <div id="hqmap"><img src="images/hqmap.png" /></div>
+      </div>
+    </div>
+  </div>
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')
+    //]]>
+  </script>
+  <script id="script-slide1" type="text/javascript" charset="UTF-8" src="docs/slide1/slide1.js"></script>
+  <script id="script-slide2" type="text/javascript" charset="UTF-8" src="docs/slide2/slide2.js"></script>
+  <script id="script-slide3" type="text/javascript" charset="UTF-8" src="docs/slide3/slide3.js"></script>
+  <!--[if gt IE 8]>
+    <script src="docs/js/libs/processing-1.3.5.api.min.js"></script>
+  <![endif]-->
+  <!--[if !IE]><!-->
+    <script src="docs/js/libs/processing-1.3.5.min.js" type="text/javascript"></script>
+  <!--<![endif]-->
+  <script type="text/javascript" src="docs/js/frontpage.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
+  <script type="text/javascript" src="docs/js/libs/jquery.qtip.min.js"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+        $('body.section-projects img.tileImage').reflect();
+        $('.solutions-image').reflect();
+
+        $("body.section-projects .tileItem").qtip({
+            content: {
+                text: function(api) {return $(this).find('.tileBody').html();}
+            },
+            position: {
+                my: 'bottom center',  // Position my top left...
+                at: 'top center', // at the bottom right of...
+            },
+            style: {
+                classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
             }
-        </script>
-        <script type="text/javascript">
-            /* Change the values below according to your Google analytics account */
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-9551159-1']);
-            _gaq.push(['_trackPageview']);
+                    });
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
+        $(".projects-wrapper .column").qtip({
+            content: {
+                text: function(api) {return $(this).parent().attr('title');}
+            },
+            position: {
+                my: 'bottom center',  // Position my top left...
+                at: 'top center', // at the bottom right of...
+            },
+            style: {
+                classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+            }
+        });
+
+        $(".section-solutions .column a.tile").qtip({
+            content: {
+                text: function(api) {return $(this).attr('title');}
+            },
+            position: {
+                my: 'bottom center',  // Position my top left...
+                at: 'top center', // at the bottom right of...
+            },
+            style: {
+                classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+            }
+        });
+
+        $("#logos a.logo").qtip({
+            content: {
+                text: function(api) {return $(this).attr('title');}
+            },
+            position: {
+                my: 'bottom center',  // Position my top left...
+                at: 'top center', // at the bottom right of...
+            },
+            style: {
+                classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+            }
+        });
+    });
+  //]]>
+  </script>
+  <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+            $('body.section-projects img.tileImage').reflect();
+    });
+
+    /* IE FALLBACK FOR GRAPHS */
+    if ( !$.browser.msie || $.browser.version >= 9 ) {
+
+        $("#logos ul li").hover(function() { //On hover...
+            //Get image url and assign it to 'thumbOver'
+            var thumbOver = $(this).find("img").attr("src"); 
+
+            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
+            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+
+            //Animate the image to 0 opacity (fade it out)
+            $(this).find("span").stop().fadeTo('normal', 0 , function() {
+                        $(this).hide() //Hide the image after fade
+            });
+        } , function() { //on hover out...
+            //Fade the image to full opacity 
+            $(this).find("span").stop().fadeTo('normal', 1).show();
+        });
+    }
+    //]]>
+  </script>
+  <script type="text/javascript">
+    //<![CDATA[
+    /* Change the values below according to your Google analytics account */
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9551159-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+  </script>
+</body>
 </html>
